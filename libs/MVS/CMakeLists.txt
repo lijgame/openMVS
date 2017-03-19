@@ -6,6 +6,7 @@ if(CGAL_FOUND)
 	link_directories(${CGAL_LIBRARY_DIRS})
 endif()
 
+SET (VCG_DIR "${OpenMVS_SOURCE_DIR}/vcglib")
 FIND_PACKAGE(VCG ${SYSTEM_PACKAGE_REQUIRED})
 if(VCG_FOUND)
 	include_directories(${VCG_INCLUDE_DIRS})
