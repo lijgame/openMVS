@@ -1,0 +1,7 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+"cmake.configureSettings":{
+        "VCG_DIR":"${workspaceRoot}/vcglib",
+        "CMAKE_EXPORT_COMPILE_COMMANDS":"ON"
+    }
+}
