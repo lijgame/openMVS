@@ -1422,6 +1422,7 @@ void DepthMapsData::FuseDepthMaps(PointCloud& pointcloud, bool bEstimateNormal)
 				} else {
 					// this point is valid, store it
 					point = X*(REAL(1)/confidence);
+					ASSERT(ISFINITE(point));
 					// invalidate all neighbor depths that do not agree with it
 					for (Depth* pDepth: invalidDepths)
 						*pDepth = 0;
@@ -1707,8 +1708,10 @@ void Scene::DenseReconstructionEstimate(void* pData)
 		case EVT_PROCESSIMAGE: {
 			const EVTProcessImage& evtImage = *((EVTProcessImage*)(Event*)evt);
 			if (evtImage.idxImage >= data.images.GetSize()) {
-				// close working threads
-				data.events.AddEvent(new EVTClose);
+				if (nMaxThreads > 1) {
+					// close working threads
+					data.events.AddEvent(new EVTClose);
+				}
 				return;
 			}
 			// select views to reconstruct the depth-map for this image
