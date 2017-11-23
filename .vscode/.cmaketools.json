@@ -6,5 +6,931 @@
     },
     "description": "Perform optimizations AND include debugging information"
   },
-  "activeEnvironments": []
+  "activeEnvironments": [],
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "RelWithDebInfo",
+        "projects": [
+          {
+            "buildDirectory": "/home/lijiang/codes/openMVS/build",
+            "name": "OpenMVS",
+            "sourceDirectory": "/home/lijiang/codes/openMVS",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/RefineMesh"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/RefineMesh",
+                "fileGroups": [
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions ",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "RefineMesh.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "RefineMesh",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "RefineMesh",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/RefineMesh",
+                "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/TextureMesh"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/TextureMesh",
+                "fileGroups": [
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions ",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "TextureMesh.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "TextureMesh",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "TextureMesh",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/TextureMesh",
+                "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/Viewer"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/Viewer",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.hxx.gch.rule",
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.hxx.rule",
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.cxx.rule"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "Camera.h",
+                      "Common.h",
+                      "Image.h",
+                      "Scene.h",
+                      "Window.h"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions  -Winvalid-pch -include /home/lijiang/codes/openMVS/build/apps/Viewer/cotire/Viewer_CXX_prefix.hxx",
+                    "defines": [
+                      "GLEW_STATIC",
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      },
+                      {
+                        "path": "/usr/include/libdrm"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "Common.cpp",
+                      "Camera.cpp",
+                      "Image.cpp",
+                      "Scene.cpp",
+                      "Viewer.cpp",
+                      "Window.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "Viewer",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a -lGLU -lGL -lGLEW -lglfw -lrt -lm -ldl -lXrandr -lXinerama -lXi -lXcursor -lXrender -lGL -lm -lpthread -ldl -ldrm -lXdamage -lXfixes -lX11-xcb -lxcb-glx -lxcb-dri2 -lXxf86vm -lXext -lX11 -lpthread -lxcb -lXau -lXdmcp ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda -lm -ldl -lXrandr -lXinerama -lXi -lXcursor -lXrender -lGL -ldrm -lXdamage -lXfixes -lX11-xcb -lxcb-glx -lxcb-dri2 -lXxf86vm -lXext -lX11 -lxcb -lXau -lXdmcp",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "Viewer",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/Viewer",
+                "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/Viewer",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/apps/Viewer/CMakeFiles/Viewer_pch",
+                      "../../build/apps/Viewer/CMakeFiles/Viewer_pch.rule",
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.hxx.gch.rule",
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.hxx.rule",
+                      "../../build/apps/Viewer/cotire/Viewer_CXX_prefix.cxx.rule"
+                    ]
+                  }
+                ],
+                "fullName": "Viewer_pch",
+                "name": "Viewer_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/Viewer",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Math",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/Math/CMakeFiles/Math_pch",
+                      "../../build/libs/Math/CMakeFiles/Math_pch.rule",
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.hxx.rule",
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.cxx.rule"
+                    ]
+                  }
+                ],
+                "fullName": "Math_pch",
+                "name": "Math_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Math",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/lib/libIO.a"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/IO",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.hxx.rule",
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.cxx.rule"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "Common.h",
+                      "EXIF.h",
+                      "Image.h",
+                      "ImageBMP.h",
+                      "ImageDDS.h",
+                      "ImageEXIF.h",
+                      "ImageJPG.h",
+                      "ImagePNG.h",
+                      "ImageSCI.h",
+                      "ImageTGA.h",
+                      "ImageTIFF.h",
+                      "OBJ.h",
+                      "PLY.h",
+                      "TinyXML2.h"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions  -Winvalid-pch -include /home/lijiang/codes/openMVS/build/libs/IO/cotire/IO_CXX_prefix.hxx",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_LIB",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_JPG",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_PNG",
+                      "_USE_SSE",
+                      "_USE_TIFF"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      },
+                      {
+                        "path": "/usr/include/x86_64-linux-gnu"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "Common.cpp",
+                      "EXIF.cpp",
+                      "Image.cpp",
+                      "ImageBMP.cpp",
+                      "ImageDDS.cpp",
+                      "ImageEXIF.cpp",
+                      "ImageJPG.cpp",
+                      "ImagePNG.cpp",
+                      "ImageSCI.cpp",
+                      "ImageTGA.cpp",
+                      "ImageTIFF.cpp",
+                      "OBJ.cpp",
+                      "PLY.cpp",
+                      "TinyXML2.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libIO.a",
+                "linkerLanguage": "CXX",
+                "name": "IO",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/IO",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/IO",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/IO/CMakeFiles/IO_pch",
+                      "../../build/libs/IO/CMakeFiles/IO_pch.rule",
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.hxx.rule",
+                      "../../build/libs/IO/cotire/IO_CXX_prefix.cxx.rule"
+                    ]
+                  }
+                ],
+                "fullName": "IO_pch",
+                "name": "IO_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/IO",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/lib/libMVS.a"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/MVS",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.hxx.rule",
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.cxx.rule"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "Camera.h",
+                      "Common.h",
+                      "DepthMap.h",
+                      "Image.h",
+                      "Interface.h",
+                      "Mesh.h",
+                      "Platform.h",
+                      "PointCloud.h",
+                      "RectsBinPack.h",
+                      "Scene.h"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions  -Winvalid-pch -include /home/lijiang/codes/openMVS/build/libs/MVS/cotire/MVS_CXX_prefix.hxx",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_LIB",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      },
+                      {
+                        "path": "/home/lijiang/codes/openMVS/vcglib"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "Common.cpp",
+                      "Camera.cpp",
+                      "DepthMap.cpp",
+                      "Image.cpp",
+                      "Mesh.cpp",
+                      "Platform.cpp",
+                      "PointCloud.cpp",
+                      "RectsBinPack.cpp",
+                      "Scene.cpp",
+                      "SceneDensify.cpp",
+                      "SceneReconstruct.cpp",
+                      "SceneRefine.cpp",
+                      "SceneRefineCUDA.cpp",
+                      "SceneTexture.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libMVS.a",
+                "linkerLanguage": "CXX",
+                "name": "MVS",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/MVS",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/MVS",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/MVS/CMakeFiles/MVS_pch",
+                      "../../build/libs/MVS/CMakeFiles/MVS_pch.rule",
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.hxx.rule",
+                      "../../build/libs/MVS/cotire/MVS_CXX_prefix.cxx.rule"
+                    ]
+                  }
+                ],
+                "fullName": "MVS_pch",
+                "name": "MVS_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/MVS",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/InterfaceVisualSFM"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/InterfaceVisualSFM",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "DataInterface.h",
+                      "Util.h"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions ",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "InterfaceVisualSFM.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "InterfaceVisualSFM",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "InterfaceVisualSFM",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/InterfaceVisualSFM",
+                "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/DensifyPointCloud"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/DensifyPointCloud",
+                "fileGroups": [
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions ",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "DensifyPointCloud.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "DensifyPointCloud",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "DensifyPointCloud",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/DensifyPointCloud",
+                "type": "EXECUTABLE"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/bin/ReconstructMesh"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/apps/ReconstructMesh",
+                "fileGroups": [
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions ",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "ReconstructMesh.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "ReconstructMesh",
+                "linkFlags": "-rdynamic",
+                "linkLanguageFlags": "-std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG",
+                "linkLibraries": "-Wl,-rpath,/usr/local/lib:/usr/local/cuda-9.0/lib64: ../../lib/libMVS.a ../../lib/libMath.a ../../lib/libIO.a ../../lib/libCommon.a /usr/local/lib/libboost_iostreams.so /usr/local/lib/libboost_program_options.so /usr/local/lib/libboost_system.so /usr/local/lib/libboost_serialization.so /usr/local/lib/libboost_regex.so /usr/local/lib/libopencv_cudabgsegm.so.3.3.1 /usr/local/lib/libopencv_cudaobjdetect.so.3.3.1 /usr/local/lib/libopencv_cudastereo.so.3.3.1 /usr/local/lib/libopencv_stitching.so.3.3.1 /usr/local/lib/libopencv_cudafeatures2d.so.3.3.1 /usr/local/lib/libopencv_superres.so.3.3.1 /usr/local/lib/libopencv_cudacodec.so.3.3.1 /usr/local/lib/libopencv_videostab.so.3.3.1 /usr/local/lib/libopencv_cudaoptflow.so.3.3.1 /usr/local/lib/libopencv_cudalegacy.so.3.3.1 /usr/local/lib/libopencv_cudawarping.so.3.3.1 /usr/local/lib/libopencv_aruco.so.3.3.1 /usr/local/lib/libopencv_bgsegm.so.3.3.1 /usr/local/lib/libopencv_bioinspired.so.3.3.1 /usr/local/lib/libopencv_ccalib.so.3.3.1 /usr/local/lib/libopencv_dpm.so.3.3.1 /usr/local/lib/libopencv_face.so.3.3.1 /usr/local/lib/libopencv_photo.so.3.3.1 /usr/local/lib/libopencv_cudaimgproc.so.3.3.1 /usr/local/lib/libopencv_cudafilters.so.3.3.1 /usr/local/lib/libopencv_fuzzy.so.3.3.1 /usr/local/lib/libopencv_hdf.so.3.3.1 /usr/local/lib/libopencv_img_hash.so.3.3.1 /usr/local/lib/libopencv_line_descriptor.so.3.3.1 /usr/local/lib/libopencv_optflow.so.3.3.1 /usr/local/lib/libopencv_reg.so.3.3.1 /usr/local/lib/libopencv_rgbd.so.3.3.1 /usr/local/lib/libopencv_saliency.so.3.3.1 /usr/local/lib/libopencv_stereo.so.3.3.1 /usr/local/lib/libopencv_structured_light.so.3.3.1 /usr/local/lib/libopencv_phase_unwrapping.so.3.3.1 /usr/local/lib/libopencv_surface_matching.so.3.3.1 /usr/local/lib/libopencv_tracking.so.3.3.1 /usr/local/lib/libopencv_datasets.so.3.3.1 /usr/local/lib/libopencv_plot.so.3.3.1 /usr/local/lib/libopencv_text.so.3.3.1 /usr/local/lib/libopencv_dnn.so.3.3.1 /usr/local/lib/libopencv_xfeatures2d.so.3.3.1 /usr/local/lib/libopencv_cudaarithm.so.3.3.1 /usr/local/lib/libopencv_ml.so.3.3.1 /usr/local/lib/libopencv_shape.so.3.3.1 /usr/local/lib/libopencv_video.so.3.3.1 /usr/local/lib/libopencv_ximgproc.so.3.3.1 /usr/local/lib/libopencv_calib3d.so.3.3.1 /usr/local/lib/libopencv_features2d.so.3.3.1 /usr/local/lib/libopencv_flann.so.3.3.1 /usr/local/lib/libopencv_highgui.so.3.3.1 /usr/local/lib/libopencv_videoio.so.3.3.1 /usr/local/lib/libopencv_xobjdetect.so.3.3.1 /usr/local/lib/libopencv_imgcodecs.so.3.3.1 /usr/local/lib/libopencv_objdetect.so.3.3.1 /usr/local/lib/libopencv_xphoto.so.3.3.1 /usr/local/lib/libopencv_imgproc.so.3.3.1 /usr/local/lib/libopencv_core.so.3.3.1 /usr/local/lib/libopencv_cudev.so.3.3.1 -lpng -ljpeg -ltiff /usr/local/lib/libceres.a -lglog -lgflags -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp -lpthread -lspqr -lcholmod -lccolamd -lcamd -lcolamd -lamd -llapack -lf77blas -latlas -lsuitesparseconfig -lrt -lcxsparse -lgomp /usr/lib/x86_64-linux-gnu/libCGAL.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_Core.so.11.0.1 /usr/lib/x86_64-linux-gnu/libCGAL_ImageIO.so.11.0.1 -lboost_thread -lboost_system -lpthread -lGLU -lGL -lz -lmpfr -lgmp -lcuda",
+                "linkPath": "-L/usr/local/lib  -L/usr/local/cuda-9.0/lib64",
+                "linkerLanguage": "CXX",
+                "name": "ReconstructMesh",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/apps/ReconstructMesh",
+                "type": "EXECUTABLE"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "build/CMakeFiles/uninstall",
+                      "build/CMakeFiles/uninstall.rule"
+                    ]
+                  }
+                ],
+                "fullName": "uninstall",
+                "name": "uninstall",
+                "sourceDirectory": "/home/lijiang/codes/openMVS",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/lib/libCommon.a"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Common",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.hxx.rule",
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.cxx.rule"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "AABB.h",
+                      "AutoEstimator.h",
+                      "AutoPtr.h",
+                      "CUDA.h",
+                      "Common.h",
+                      "Config.h",
+                      "ConfigTable.h",
+                      "CriticalSection.h",
+                      "EventQueue.h",
+                      "FastDelegate.h",
+                      "FastDelegateBind.h",
+                      "FastDelegateCPP11.h",
+                      "File.h",
+                      "Filters.h",
+                      "HTMLDoc.h",
+                      "HalfFloat.h",
+                      "Hash.h",
+                      "LinkLib.h",
+                      "List.h",
+                      "Log.h",
+                      "MemFile.h",
+                      "OBB.h",
+                      "Octree.h",
+                      "Plane.h",
+                      "Queue.h",
+                      "Ray.h",
+                      "Rotation.h",
+                      "SML.h",
+                      "Semaphore.h",
+                      "SharedPtr.h",
+                      "Sphere.h",
+                      "Streams.h",
+                      "Strings.h",
+                      "Thread.h",
+                      "Timer.h",
+                      "Types.h",
+                      "Util.h",
+                      "Wildcard.h",
+                      "AABB.inl",
+                      "OBB.inl",
+                      "Octree.inl",
+                      "Plane.inl",
+                      "Ray.inl",
+                      "Rotation.inl",
+                      "Sampler.inl",
+                      "Sphere.inl",
+                      "Types.inl",
+                      "Util.inl"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions  -Winvalid-pch -include /home/lijiang/codes/openMVS/build/libs/Common/cotire/Common_CXX_prefix.hxx",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_LIB",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "Common.cpp",
+                      "CUDA.cpp",
+                      "ConfigTable.cpp",
+                      "EventQueue.cpp",
+                      "Log.cpp",
+                      "SML.cpp",
+                      "Timer.cpp",
+                      "Types.cpp",
+                      "Util.cpp",
+                      "Wildcard.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libCommon.a",
+                "linkerLanguage": "CXX",
+                "name": "Common",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Common",
+                "type": "STATIC_LIBRARY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Common",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/Common/CMakeFiles/Common_pch",
+                      "../../build/libs/Common/CMakeFiles/Common_pch.rule",
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.hxx.rule",
+                      "../../build/libs/Common/cotire/Common_CXX_prefix.cxx.rule"
+                    ]
+                  }
+                ],
+                "fullName": "Common_pch",
+                "name": "Common_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Common",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Common",
+                "fullName": "all_pch",
+                "name": "all_pch",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Common",
+                "type": "UTILITY"
+              },
+              {
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Common",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/Common/CMakeFiles/clean_cotire",
+                      "../../build/libs/Common/CMakeFiles/clean_cotire.rule"
+                    ]
+                  }
+                ],
+                "fullName": "clean_cotire",
+                "name": "clean_cotire",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Common",
+                "type": "UTILITY"
+              },
+              {
+                "artifacts": [
+                  "/home/lijiang/codes/openMVS/build/lib/libMath.a"
+                ],
+                "buildDirectory": "/home/lijiang/codes/openMVS/build/libs/Math",
+                "fileGroups": [
+                  {
+                    "isGenerated": true,
+                    "sources": [
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.hxx.gch.rule",
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.hxx.rule",
+                      "../../build/libs/Math/cotire/Math_CXX_prefix.cxx.rule"
+                    ]
+                  },
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "Common.h",
+                      "LBP.h",
+                      "IBFS/IBFS.h",
+                      "LMFit/lmmin.h",
+                      "TRWS/MRFEnergy.h",
+                      "TRWS/instances.h",
+                      "TRWS/typeBinary.h",
+                      "TRWS/typeBinaryFast.h",
+                      "TRWS/typeGeneral.h",
+                      "TRWS/typePotts.h",
+                      "TRWS/typeTruncatedLinear.h",
+                      "TRWS/typeTruncatedLinear2D.h",
+                      "TRWS/typeTruncatedQuadratic.h",
+                      "TRWS/typeTruncatedQuadratic2D.h",
+                      "TRWS/MRFEnergy.inl",
+                      "TRWS/minimize.inl",
+                      "TRWS/ordering.inl",
+                      "TRWS/treeProbabilities.inl"
+                    ]
+                  },
+                  {
+                    "compileFlags": "   -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -fopenmp -O2 -g -DNDEBUG      -std=c++11 -W -Wall -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Winit-self -Wsign-promo -Wreorder -Wno-undef -Wno-comment -Wno-narrowing -Wno-attributes -Wno-enum-compare -Wno-missing-declarations -Wno-missing-field-initializers -Wno-unused-local-typedefs -Wno-delete-non-virtual-dtor -fdiagnostics-show-option -ftemplate-backtrace-limit=0 -Wno-long-long -pthread -fomit-frame-pointer -frounding-math -msse -msse2 -msse3 -mssse3 -msse4.1 -msse4.2 -ffunction-sections -Wall -fexceptions  -Winvalid-pch -include /home/lijiang/codes/openMVS/build/libs/Math/cotire/Math_CXX_prefix.hxx",
+                    "defines": [
+                      "OPENCV_TRAITS_ENABLE_DEPRECATED",
+                      "_LIB",
+                      "_USE_BOOST",
+                      "_USE_CUDA",
+                      "_USE_EIGEN",
+                      "_USE_FAST_CBRT",
+                      "_USE_FAST_FLOAT2INT",
+                      "_USE_NONFREE",
+                      "_USE_OPENGL",
+                      "_USE_OPENMP",
+                      "_USE_SSE"
+                    ],
+                    "includePath": [
+                      {
+                        "path": "/home/lijiang/codes/openMVS"
+                      },
+                      {
+                        "path": "/usr/local/cuda-9.0/include"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include"
+                      },
+                      {
+                        "path": "/usr/local/include/eigen3"
+                      },
+                      {
+                        "isSystem": true,
+                        "path": "/usr/local/include/opencv"
+                      },
+                      {
+                        "path": "/home/lijiang/codes/openMVS/libs/Math/."
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "Common.cpp",
+                      "IBFS/IBFS.cpp",
+                      "LMFit/lmmin.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "libMath.a",
+                "linkerLanguage": "CXX",
+                "name": "Math",
+                "sourceDirectory": "/home/lijiang/codes/openMVS/libs/Math",
+                "type": "STATIC_LIBRARY"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.15442256438669233",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
 }
