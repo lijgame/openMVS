@@ -16,7 +16,6 @@
 #else
 #include <unistd.h>
 #include <dirent.h>
-#include "Wildcard.h"
 #endif
 
 
@@ -399,6 +398,64 @@ public:
 		return simplifyPath(path);
 	}
 
+	static String getRelativePath(const String& currentPath, const String& targetPath) {
+		// returns the path to the target relative to the current path;
+		// both current and target paths must be full paths;
+		// current path is assumed to be a folder, while target path can be also a file
+		CLISTDEF2(String) currentPathValues, targetPathValues;
+		Util::strSplit(currentPath, PATH_SEPARATOR, currentPathValues);
+		if (currentPathValues.back().empty())
+			currentPathValues.pop_back();
+		Util::strSplit(targetPath, PATH_SEPARATOR, targetPathValues);
+		size_t idxCurrentPath(0), idxTargetPath(0);
+		while (
+			idxCurrentPath < currentPathValues.size() &&
+			idxTargetPath < targetPathValues.size() &&
+			#ifdef _MSC_VER
+			_tcsicmp(currentPathValues[idxCurrentPath], targetPathValues[idxTargetPath]) == 0
+			#else
+			_tcscmp(currentPathValues[idxCurrentPath], targetPathValues[idxTargetPath]) == 0
+			#endif
+		)
+			++idxCurrentPath, ++idxTargetPath;
+		if (idxCurrentPath == 0)
+			return targetPath;
+		String relativePath;
+		relativePath.reserve(targetPath.size());
+		while (idxCurrentPath < currentPathValues.size()) {
+			relativePath += _T("..") PATH_SEPARATOR_STR;
+			++idxCurrentPath;
+		}
+		const size_t idxFirstTarget(idxTargetPath);
+		while (idxTargetPath < targetPathValues.size()) {
+			if (idxTargetPath > idxFirstTarget)
+				relativePath += PATH_SEPARATOR;
+			relativePath += targetPathValues[idxTargetPath++];
+		}
+		return relativePath;
+	}
+
+	static String& getCommonPath(String& commonPath, const String& path) {
+		// returns the path shared by the given paths
+		#ifdef _MSC_VER
+		while (_tcsnicmp(commonPath, path, commonPath.length()) != 0) {
+		#else
+		while (_tcsncmp(commonPath, path, commonPath.length()) != 0) {
+		#endif
+			commonPath.pop_back();
+			commonPath = getFilePath(commonPath);
+		}
+		return commonPath;
+	}
+	static String getCommonPath(const String* arrPaths, size_t numPaths) {
+		// returns the path shared by all given paths
+		ASSERT(numPaths > 0);
+		String commonPath(arrPaths[0]);
+		for (size_t i=1; !commonPath.empty() && i<numPaths; ++i)
+			getCommonPath(commonPath, arrPaths[i]);
+		return commonPath;
+	}
+
 	static String getFilePath(const String& path) {
 		const String::size_type i = path.rfind(PATH_SEPARATOR);
 		return (i != String::npos) ? path.substr(0, i+1) : String();
@@ -448,92 +505,6 @@ public:
 		#endif // _MSC_VER
 	}
 
-	// the set of all subdirectories
-	static std::vector<String> getFolderSubfolders(const String& folder, bool recursive = false) {
-		return getFolderWildcard(folder, "*", recursive, true, false);
-	}
-	// the set of all files
-	static std::vector<String> getFolderFiles(const String& folder, bool recursive = false) {
-		return getFolderWildcard(folder, "*", recursive, false, true);
-	}
-	// the set of all folders and files
-	static std::vector<String> getFolderAll(const String& folder, bool recursive = false) {
-		return getFolderWildcard(folder, "*", recursive, true, true);
-	}
-	// the set of all folder contents matching a wildcard string
-	// if folders is true, include folders; if files is true, include files
-	static std::vector<String> getFolderWildcard(const String& folder,
-											 const String& wild,
-											 bool recursive = false,
-											 bool subfolders = true,
-											 bool files = true) {
-		String dir(folder.empty() ? String(".") : folder);
-		Util::ensureFolderSlash(dir);
-		std::vector<String> results;
-		#ifdef _MSC_VER
-		String wildcard(dir + wild);
-		intptr_t handle(-1);
-		_finddata_t fileinfo;
-		for (bool OK = (handle = _findfirst((char*)wildcard.c_str(), &fileinfo)) != -1; OK; OK = (_findnext(handle, &fileinfo)==0))
-		{
-			String strentry = fileinfo.name;
-			if (strentry.compare(".")!=0 && strentry.compare("..")!=0) {
-				if (fileinfo.attrib & _A_SUBDIR) {
-					if (recursive) {
-						const String relpath(strentry+PATH_SEPARATOR);
-						const std::vector<String> sub_results(getFolderWildcard(folder+relpath, wild, recursive, subfolders, files));
-						for (const String& file: sub_results)
-							results.push_back(relpath+file);
-					}
-					if (subfolders)
-						results.push_back(strentry);
-					continue;
-				}
-				if (files)
-					results.push_back(strentry);
-			}
-		}
-		_findclose(handle);
-		#else
-		DIR* d = opendir(dir.c_str());
-		if (d)
-		{
-			for (dirent* entry = readdir(d); entry; entry = readdir(d))
-			{
-				String strentry = entry->d_name;
-				if (strentry.compare(".")!=0 && strentry.compare("..")!=0)
-				{
-					String subpath(dir + strentry);
-					if (isFolder(subpath) && stlplus::wildcard(wild, strentry)) {
-						if (recursive) {
-							const String relpath(subpath+PATH_SEPARATOR);
-							const std::vector<String> sub_results(getFolderWildcard(folder+relpath, wild, recursive, subfolders, files));
-							for (const String& file: sub_results)
-								results.push_back(relpath+file);
-						}
-						if (subfolders)
-							results.push_back(strentry);
-						continue;
-					}
-					if (files && isFile(subpath) && stlplus::wildcard(wild, strentry))
-						results.push_back(strentry);
-				}
-			}
-			closedir(d);
-		}
-		#endif // _MSC_VER
-		if (recursive && wild.compare("*")!=0) {
-			const std::vector<String> sub_folder(getFolderSubfolders(folder, true));
-			for (const String& folder: sub_folder) {
-				const String relpath(folder+PATH_SEPARATOR);
-				const std::vector<String> sub_results(getFolderWildcard(folder+relpath, wild, true, subfolders, files));
-				for (const String& file: sub_results)
-					results.push_back(relpath+file);
-			}
-		}
-		return results;
-	}
-
 	static String getValue(const String& str, const String& label) {
 		String::size_type pos = str.find(label);
 		if (pos == String::npos)
@@ -556,18 +527,24 @@ public:
 		return str;
 	}
 	// split an input string with a delimiter and fill a string vector
-	static bool strSplit(const String& str, const String& delim, std::vector<String>& values) {
-		if (delim.empty())
-			return false;
-		values.clear();
-		String::size_type start(0);
-		String::size_type end(String::npos -1);
+	static void strSplit(const String& str, TCHAR delim, CLISTDEF2(String)& values) {
+		values.Empty();
+		String::size_type start(0), end(0);
 		while (end != String::npos) {
 			end = str.find(delim, start);
-			values.push_back(str.substr(start, end-start));
+			values.AddConstruct(str.substr(start, end-start));
+			start = end + 1;
+		}
+	}
+	static void strSplit(const String& str, const String& delim, CLISTDEF2(String)& values) {
+		ASSERT(!delim.empty());
+		values.Empty();
+		String::size_type start(0), end(0);
+		while (end != String::npos) {
+			end = str.find(delim, start);
+			values.AddConstruct(str.substr(start, end-start));
 			start = end + delim.size();
 		}
-		return (values.size() >= 2);
 	}
 
 	static String getShortTimeString() {
@@ -612,38 +589,38 @@ public:
 	// format given time in milliseconds to higher units
 	static String formatTime(int64_t sTime, uint32_t nAproximate = 0) {
 		char buf[128];
-		UINT len = 0;
-		UINT nrNumbers = 0;
+		uint32_t len = 0;
+		uint32_t nrNumbers = 0;
 
-		UINT rez = (UINT)(sTime / ((int64_t)24*3600*1000));
+		uint32_t rez = (uint32_t)(sTime / ((int64_t)24*3600*1000));
 		if (rez) {
 			++nrNumbers;
 			len += _stprintf(buf+len, "%ud", rez);
 		}
 		if (nAproximate > 3 && nrNumbers > 0)
 			return buf;
-		rez = (UINT)((sTime%((int64_t)24*3600*1000)) / (3600*1000));
+		rez = (uint32_t)((sTime%((int64_t)24*3600*1000)) / (3600*1000));
 		if (rez) {
 			++nrNumbers;
 			len += _stprintf(buf+len, "%uh", rez);
 		}
 		if (nAproximate > 2 && nrNumbers > 0)
 			return buf;
-		rez = (UINT)((sTime%((int64_t)3600*1000)) / (60*1000));
+		rez = (uint32_t)((sTime%((int64_t)3600*1000)) / (60*1000));
 		if (rez) {
 			++nrNumbers;
 			len += _stprintf(buf+len, "%um", rez);
 		}
 		if (nAproximate > 1 && nrNumbers > 0)
 			return buf;
-		rez = (UINT)((sTime%((int64_t)60*1000)) / (1*1000));
+		rez = (uint32_t)((sTime%((int64_t)60*1000)) / (1*1000));
 		if (rez) {
 			++nrNumbers;
 			len += _stprintf(buf+len, "%us", rez);
 		}
 		if (nAproximate > 0 && nrNumbers > 0)
 			return buf;
-		rez = (UINT)(sTime%((int64_t)1*1000));
+		rez = (uint32_t)(sTime%((int64_t)1*1000));
 		if (rez || !nrNumbers)
 			len += _stprintf(buf+len, "%ums", rez);
 

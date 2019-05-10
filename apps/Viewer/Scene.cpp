@@ -141,7 +141,7 @@ struct IntersectRayMesh : public TIntersectRay<MVS::Mesh,Scene::OctreeMesh> {
 		typedef std::unordered_set<MVS::Mesh::FIndex> FaceSet;
 		FaceSet set;
 		FOREACHRAWPTR(pIdx, idices, size) {
-			const MVS::Mesh::VIndex idxVertex(*pIdx);
+			const MVS::Mesh::VIndex idxVertex((MVS::Mesh::VIndex)*pIdx);
 			const MVS::Mesh::FaceIdxArr& faces = scene.vertexFaces[idxVertex];
 			set.insert(faces.begin(), faces.end());
 		}
@@ -349,7 +349,7 @@ bool Scene::Open(LPCTSTR fileName, LPCTSTR meshFileName)
 	// load the scene
 	WORKING_FOLDER = Util::getFilePath(fileName);
 	INIT_WORKING_FOLDER;
-	if (!scene.Load(fileName))
+	if (!scene.Load(fileName, true))
 		return false;
 	if (meshFileName) {
 		// load given mesh
